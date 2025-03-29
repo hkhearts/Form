@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summa oru form</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; 
+        min-height: 100vh; 
+        padding: 20px; 
+        box-sizing: border-box;
+        background-color: #f5ebe0;
+        justify-content: center;
+    }
+    h1{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 50px;
+        color: #f3e9dc;
+        background-color: #8b7169;
+        border-radius: 25px;
+    }
+    #btn1{
+        border-radius: 25px;
+        background: #73AD21;
+        padding: 20px; 
+        width: 500px;
+        height: 50px;
+        background-color: #7c4f42;
+        border: 3px solid #3e2522;
+        color: var(--clr-accent);
+        transition: all 0.3s;
+        font-size: 16px;
+        justify-content: center;
+    }
+    #btn1:hover{
+        transform: translateY(-10px);
+        background-color: var(--clr-accent);
+        color: var(--clr-light);
+    }
+    
+    form {
+        padding: 20px;
+        max-width: 600px;
+        width: 100%;
+        max-height: 90vh;
+    }
+    
+    form label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #3e2522;
+    }
+    
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="date"],
+    select
+     {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        border-radius: 25px;
+        border-color: #8b7169;
+    }
+    
+    form input[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    form input[type="submit"]:hover {
+        background-color: #218838;
+    }
+    
+    @media (max-width: 600px) {
+        form {
+            padding: 15px;
+        }
+    
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="date"] {
+            width: calc(100% - 20px);
+        }
+    }
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    select{
+        width: 100%;
+    }
+</style>
+<body>
+    <main>
+        <form action="./rand.html" method="post">
+            <h1>A sample form</h1>
+            
+                <label for="tc_no">1. TC no:</label>
+                <input type="number" id="tc_no" name="tc_no" required><br><br>
+                
+                <label for="dob_num">2. Date of Birth [DD/MM/YYYY]:</label>
+                <input type="date" id="dob_num" name="dob_num"><br><br>
+            
+
+            <center><button id="btn1" type="submit"">Submit</button></center>
+
+            <center><a href="{% url 'automate_form' %}" class="btn btn-primary">Automate</a></center>
+            
+        </form>
+    </main>
+</body>
+</html>
